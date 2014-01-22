@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+require "time"
+
 module BSON
 
   # Injects behaviour for encoding date time values to raw bytes as specified by
@@ -36,7 +38,7 @@ module BSON
       to_time.to_bson(encoded)
     end
 
-    if Environment.ree?
+    if Environment.ruby_18?
 
       # Constant to multiple the seconds fraction my for millis in REE.
       #
