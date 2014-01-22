@@ -13,6 +13,7 @@
 # limitations under the License.
 
 $:.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
+require 'time'
 require 'bson'
 require 'json'
 require 'stringio'
